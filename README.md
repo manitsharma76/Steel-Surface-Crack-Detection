@@ -211,10 +211,18 @@ The notebook produces:
 Generated files include:
 
 ```text
-train_val_curves.png
-pred_vs_gt_grid.png
-gradcam.png
-dashboard.png
+images/defect_presence_distribution.png
+images/defect_class_distribution.png
+images/sample_images_and_masks.png
+images/mask_pixel_distribution.png
+images/train_val_curves.png
+images/training_history.png
+images/pred_vs_gt_grid.png
+images/prediction_overlay.png
+images/gradcam.png
+images/validation_metrics.png
+images/confusion_matrix.png
+images/dashboard.png
 ```
 
 ## Running the Notebook
@@ -287,10 +295,39 @@ CVprojects/
 ├── Steel-surface-detection.ipynb   # Data preparation, training, evaluation, and inference
 ├── README.md                        # Project documentation
 ├── resnet.pth                       # Generated best model checkpoint
-├── train_val_curves.png             # Generated training plots
-├── pred_vs_gt_grid.png              # Generated qualitative evaluation
-├── gradcam.png                      # Generated explainability visualization
-└── dashboard.png                    # Generated project summary dashboard
+└── images/                          # Generated visualization outputs
 ```
 
 The generated model and image files appear only after the corresponding notebook cells have been executed.
+
+## Visualization Gallery
+
+### Dataset exploration
+
+| Defect presence | Defect classes |
+| --- | --- |
+| ![Defect versus no-defect distribution](images/defect_presence_distribution.png) | ![Defect class distribution](images/defect_class_distribution.png) |
+
+| Sample images and masks | Mask pixel distribution |
+| --- | --- |
+| ![Sample images and ground-truth masks](images/sample_images_and_masks.png) | ![Mask pixel distribution](images/mask_pixel_distribution.png) |
+
+### Training and evaluation
+
+![Training and validation curves](images/train_val_curves.png)
+
+![Training history](images/training_history.png)
+
+| Validation metrics | Confusion matrix |
+| --- | --- |
+| ![Validation metrics](images/validation_metrics.png) | ![Pixel-level confusion matrix](images/confusion_matrix.png) |
+
+### Predictions and explainability
+
+![Prediction versus ground truth grid](images/pred_vs_gt_grid.png)
+
+![Prediction overlay](images/prediction_overlay.png)
+
+![Grad-CAM visualization](images/gradcam.png)
+
+![Project summary dashboard](images/dashboard.png)
